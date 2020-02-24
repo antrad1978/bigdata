@@ -19,4 +19,4 @@ print(playDataList[0:4])
 lenghts = playData.map(lambda x: len(x))
 print(lenghts.collect())
 
-lenghts.saveAsTextFile('savedData1')
+lenghts.saveAsTextFile('savedData11')

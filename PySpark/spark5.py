@@ -39,7 +39,8 @@ keys = filDataSingleRDD.keys()
 keys.collect()
 
 filDataPairedRDD11 = filDataPairedRDD1.map(lambda x : (x[0], [x[1], 1]))
-filDataPairedRDD11.take(4)
+res1 = filDataPairedRDD11.take(4)
+print(res1)
 
 filDataSumandCount = filDataPairedRDD11.reduceByKey(lambda l1, l2: [l1[0] + l2[0], l1[1]+l2[1]])
 print(filDataSumandCount.collect())
